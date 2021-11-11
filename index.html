@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Calcular Retorno</title>
+</head>
+<body onload="autoSetTodayDate(), hideOutputField()">
+  <header class="header">
+    <h1>Calcular Retorno de Consulta</h1>
+  </header>
+  <main class="main">
+    <form class="form">
+      <fielset class="fieldset">
+        <label for="firstDateInput" class="dateInputLabel" id="firstDateLabel">Data da Ultima Menstruação:</label>
+        <input type="date" name="firstDateInput" id="firstDateInput" class="dateInput" required>
+
+        <label for="secondDateInput" class="dateInputLabel" id="secondDateLabel">Data da Consulta:</label>
+        <input type="date" name="secondDateInput" id="secondDateInput" class="dateInput" required>        
+
+        <fieldset class="numberInputFieldset">
+          <label for="minWeeks" class="inputLabel">Minimo de Semanas:</label>
+          <input type="number" class="numberInput" name="minWeeks" id="minWeeks" value="8" required>
+        </fieldset>
+
+        <fieldset class="numberInputFieldset">
+        <label for="maxWeeks" class="inputLabel">Maximo de Semanas:</label>
+        <input type="number" class="numberInput" name="maxWeeks" id="maxWeeks" value="12" required>     
+        </fieldset>   
+
+        <span class="outputField" id="outputField"></span>
+
+        <button type="button" id="calcButton" class="calcButton" onclick="calculateReturn(event)">Calcular</button>
+      </fieldset>
+    </form>
+  </main>  
+</body>
+
+<script src="index.js"></script>
+
+</html>

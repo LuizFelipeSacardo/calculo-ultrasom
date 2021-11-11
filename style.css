@@ -1,0 +1,205 @@
+*{
+  --fontMainColor: rgb(124, 8, 105);
+  --backGroundColor: rgb(210, 210, 219);
+  --secondaryBackgroundColor: rgba(231, 221, 221, 0.274);
+}
+
+.header > h1{
+  text-align: center;
+  font-size: 2rem; 
+  color: var(--fontMainColor);   
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--backGroundColor);   
+  min-height: 60px;
+  height: 30vw;
+  max-height: 200px; 
+  max-width: 98%;  
+  margin: 4px;  
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--fontMainColor); 
+}
+
+.fieldset{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--fontMainColor); 
+}
+
+.numberInputFieldset{
+  display: flex;
+  flex-direction: column;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.dateInputLabel, .dateInput{
+  width: 80vw; 
+  text-align: center;
+}
+
+.dateInputLabel{
+  color: var(--fontMainColor);
+  margin-top: 13px;
+}
+
+.inputLabel{
+  text-align: end;
+  font-size: 1rem;
+  font-weight: 550;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-right: 10px;
+  color: var(--fontMainColor);
+}
+
+.numberInput{
+  max-width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  border-width: 1px;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+.dateInputLabel{
+  font-weight: 550;
+  font-size: 1.2rem;
+}
+
+.dateInput{
+  height: 40px; 
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  border-width: 1px;
+}
+
+.outputField{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--backGroundColor);
+  width: 95vw;
+  height: 130px;
+  text-align: center;
+  font-size: 1.2rem;  
+  border-radius: 5px;  
+}
+
+.calcButton{
+  width: 60vw;
+  max-width: 500px;
+  height: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  border-width: 1px;
+}
+
+.calcButton:active{
+  transform: scale(0.9);
+}
+
+.calcButton:hover{
+  color: var(--fontMainColor);
+  background-color: white;
+  font-size: 2rem;
+}
+
+.outputHighlightNumber{
+  font-weight: 1000;  
+}
+
+.hideOutputField{
+  display: none;
+}
+
+
+@media (min-width: 600px) {  
+  body, fieldset, .inputLabel, .dateInputLabel, .numberInput, .dateInput{
+    width: 80vw;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-top: 5px;    
+  }   
+
+  .fieldset{
+    padding: 0;    
+  }
+
+  .header{     
+    max-width: 720px;
+  }
+
+  .header > h1{
+    font-size: 2.8rem;
+  }
+
+  .numberInput, .inputLabel{
+    width: 300px;    
+    justify-content: space-around;
+    margin-top: 10px;
+  }    
+
+  .inputLabel{
+    width: 250px;
+    margin-right: 20px;
+    margin-left: 12%;    
+    justify-content: center;
+    align-items: center;    
+    font-size: 1.4rem;
+  }
+
+  .numberInput{
+    width: 200px; 
+    margin-left: 0; 
+  }
+
+  .dateInput{
+    margin-top: 1px;
+    max-width: 440px;
+  }
+
+  .dateInputLabel, .inputLabel{
+    font-size: 1.4rem; 
+    margin-top: 10px;
+  }
+
+  .numberInputFieldset{
+    flex-direction: row;
+  }
+
+  .outputField, .outputField > p{
+    font-size: 1.5rem;  
+    max-width: 98%;
+  } 
+
+  .hideOutputField{
+    display: none;
+  }
+}
