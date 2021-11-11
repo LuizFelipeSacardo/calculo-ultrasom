@@ -37,7 +37,7 @@ function calculateReturn(event){
   
   const outputField = document.querySelector('#outputField');
   outputField.innerHTML = `<p>Se Passaram <span class="outputHighlightNumber">${entireWeeks}</span> semana(s) e <span class="outputHighlightNumber">${Math.round(remainOfWeekToDays)}</span> dia(s) desde a ultima menstruação.
-  O ultrason deve ser agendado entre os dias <span class="outputHighlightNumber">${minReturnDate.toLocaleDateString('pt-BR', {timeZone: 'UTC'})}</span> e <span class="outputHighlightNumber">${maxReturnDate.toLocaleDateString('pt-BR', {timeZone: 'UTC'})}.</span></p>` 
+  O ultrasom deve ser agendado entre os dias <span class="outputHighlightNumber">${minReturnDate.toLocaleDateString('pt-BR', {timeZone: 'UTC'})}</span> e <span class="outputHighlightNumber">${maxReturnDate.toLocaleDateString('pt-BR', {timeZone: 'UTC'})}.</span></p>` 
 }
 
 function weekToDays(weeks){
