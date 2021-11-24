@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Calcular Ultrasom</title>
 </head>
-<body onload="autoSetTodayDate(), hideOutputField()">
+<body onload="autoSetTodayDate(), hideOutputField(), hideOutputFieldErrors()">
   <header class="header">
     <h1>Calcular Data do Ultrasom</h1>
   </header>
@@ -31,6 +31,7 @@
         <input type="number" class="numberInput" name="maxWeeks" id="maxWeeks" value="12" required>     
         </fieldset>   
 
+        <span class="outputField" id="outputField-error"></span>
         <span class="outputField" id="outputField"></span>
 
         <button type="button" id="calcButton" class="calcButton" onclick="calculateReturn(event)">Calcular</button>
